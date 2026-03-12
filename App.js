@@ -1,10 +1,9 @@
-import React from "react";
 import {
-  View,
-  Text,
+  Image,
   StyleSheet,
+  Text,
   TouchableOpacity,
-  Image
+  View
 } from "react-native";
 
 import { NavigationContainer } from "@react-navigation/native";
@@ -24,7 +23,7 @@ function HomeScreen({ navigation }) {
         </View>
 
         <Image
-          source={{uri:"https://i.pravatar.cc/100"}}
+          source={require("./assets/avatar.png")}
           style={styles.avatar}
         />
       </View>
@@ -40,7 +39,7 @@ function HomeScreen({ navigation }) {
 
           <View style={styles.icon1}>
             <Image
-              source={require("./assets/scan.png")}
+              source={require("./assets/icons/newscan.png")}
               style={styles.icon}
             /></View>
           <Text style={styles.cardTitle}>Scan new</Text>
@@ -50,7 +49,7 @@ function HomeScreen({ navigation }) {
         <View style={styles.card}>
           <View style={styles.icon2}>
             <Image
-              source={require("./assets/icon2.png")}
+              source={require("./assets/icons/Counterfeits.png")}
               style={styles.icon}
             /></View>
           <Text style={styles.cardTitle}>Counterfeits</Text>
@@ -60,7 +59,7 @@ function HomeScreen({ navigation }) {
         <View style={styles.card}>
           <View style={styles.icon3}>
             <Image
-              source={require("./assets/icon3.png")}
+              source={require("./assets/icons/Success.png")}
               style={styles.icon}
             /></View>
           <Text style={styles.cardTitle}>Success</Text>
@@ -70,7 +69,7 @@ function HomeScreen({ navigation }) {
         <View style={styles.card}>
           <View style={styles.icon4}>
             <Image
-              source={require("./assets/calendar.png")}
+              source={require("./assets/icons/Directory.png")}
               style={styles.icon}
             /></View>
           <Text style={styles.cardTitle}>Directory</Text>
@@ -88,17 +87,17 @@ function ScanScreen() {
     <View style={styles.container2}>
 
       <Image
-        source={require("./assets/nuoc_ep.png")}
+        source={require("./assets/icons/nuoc_ep.png")}
         style={styles.product}
       />
       <Image
-        source={require("./assets/Group5.png")}
+        source={require("./assets/icons/Group5.png")}
         style={styles.scanFrame}
       />
 
       <View style={styles.bottomCard}>
         <Image
-          source={require("./assets/nuoc_ep.png")}
+          source={require("./assets/icons/nuoc_ep.png")}
           style={styles.smallImage}
         />
 
@@ -111,7 +110,7 @@ function ScanScreen() {
 
         <View style={styles.plus}>
           <Image
-            source={require("./assets/square-plus.png")}
+            source={require("./assets/icons/square-plus.png")}
             style={{ width: 35, height: 35 }}
           /></View>
 
@@ -197,10 +196,6 @@ const styles = StyleSheet.create({
     alignItems:"center"
   },
 
-  icon:{
-    fontSize:30
-  },
-
   cardTitle:{
     fontSize:18,
     marginTop:15
@@ -251,7 +246,8 @@ const styles = StyleSheet.create({
 
   icon:{
     width:30,
-    height:30
+    height:30,
+    fontSize:30
   },
   scanArea:{
   justifyContent:"center",
